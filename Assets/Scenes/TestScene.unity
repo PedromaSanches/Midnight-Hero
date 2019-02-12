@@ -219,7 +219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f35dbbdcb9bef94791c66c268fac3af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
 --- !u!61 &1042073237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -431,7 +430,7 @@ GameObject:
   - component: {fileID: 1993057125}
   - component: {fileID: 1993057124}
   - component: {fileID: 1993057123}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
