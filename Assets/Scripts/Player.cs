@@ -217,18 +217,23 @@ public class Player : MonoBehaviour {
                 //Inserir animação para saltar enquanto IDLE com o Player direcionado para a esquerda ou direita consoante a sua última posição
 
                 //Definição do salto do Player
-                player.velocity = Vector2.up * jumpVelocity;
+                /*player.velocity = Vector2.up * jumpVelocity;
 
                 //Condição que verifica se o Player encontra-se em queda
                 if (player.velocity.y < 0)
                 {
-                    player.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime; // https://www.youtube.com/watch?v=7KiK0Aqtmzc
-                }
+                    //player.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime; // https://www.youtube.com/watch?v=7KiK0Aqtmzc
+                   
+                }*/
 
                 //Definição da Animação
                 animator.SetBool("Idle", false);
                 animator.SetBool("Jumping", true);
-                
+                GetComponent<Rigidbody2D>().AddForce(Vector2.up * 30);
+
+
+
+
             }
 
         }
