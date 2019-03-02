@@ -199,8 +199,9 @@ GameObject:
   - component: {fileID: 1042073239}
   - component: {fileID: 1042073238}
   - component: {fileID: 1042073237}
-  - component: {fileID: 1042073236}
   - component: {fileID: 1042073241}
+  - component: {fileID: 1042073242}
+  - component: {fileID: 1042073236}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -216,9 +217,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1042073235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f35dbbdcb9bef94791c66c268fac3af, type: 3}
+  m_Script: {fileID: 11500000, guid: a20144eb100a49642b492030ff7cd493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
+  crouchSpeedDivisor: 3
+  coyoteDuration: 0.5
+  maxFallSpeed: -25
+  jumpForce: 6.3
+  crouchJumpBoost: 2.5
+  jumpHoldForce: 1.9
+  jumpHoldDuration: 0.1
+  groundDistance: 0.2
+  isOnGround: 0
+  isJumping: 0
+  isCrouching: 0
+  isIDLE: 0
 --- !u!61 &1042073237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -341,6 +355,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1042073242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1042073235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2153181a04bac6646924f7c67894a848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  jumpHeld: 0
+  jumpPressed: 0
+  crouchHeld: 0
+  crouchPressed: 0
 --- !u!1 &1255086373
 GameObject:
   m_ObjectHideFlags: 0
